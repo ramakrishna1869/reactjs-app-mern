@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
    axios.get(`${base_url}/getUsers`).then(res => { setRecordData(res.data) }).catch(err => alert(`Some error occured ==>${err}`));
-  }, []);
+  }, [base_url]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
